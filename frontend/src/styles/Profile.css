@@ -1,0 +1,17 @@
+.profile-container {
+    padding: 2rem;
+    border-left: 2px solid #333;
+    height: 50rem;
+}
+
+.profile-data {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-app {
+    border-top: 2px solid #333;
+}

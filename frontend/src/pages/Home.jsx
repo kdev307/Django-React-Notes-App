@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note";
 import "../styles/Home.css";
+import Profile from "./Profile";
 
 function Home() {
     const [notes, setNotes] = useState([]);
-    const [content, setContent] = useState("");
+    const [content, setContent] = useState([]);
     const [title, setTitle] = useState("");
 
     useEffect(() => {
@@ -36,44 +37,52 @@ function Home() {
         e.preventDefault();
         api.post("/api/notes/", { content, title })
             .then((res) => {
-                if (res.status === 201) alert("Note Created !");
-                else alert("Failed to make note.");
+                if (res.status === 201) {
+                    alert("Note Created !");
+                    setTitle("");
+                    setContent("");
+                } else alert("Failed to make note.");
                 getNotes();
             })
             .catch((err) => alert(err));
     };
 
     return (
-        <div>
+        <div className="home">
             <div>
-                <h2>Notes</h2>
-                {notes.map((note) => (
-                    <Note note={note} onDelete={deleteNote} key={note.id} />
-                ))}
+                <div>
+                    <h2>Your Notes</h2>
+                    <div className="note-block">
+                        {notes.map((note) => (
+                            <Note note={note} onDelete={deleteNote} key={note.id} />
+                        ))}
+                    </div>
+                </div>
+                <h2>Create a Note</h2>
+                <form action="" onSubmit={createNote}>
+                    <label htmlFor="title">Title:</label>
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        required
+                        onChange={(e) => setTitle(e.target.value)}
+                        value={title}
+                    />
+                    <br />
+                    <label htmlFor="content">Content:</label>
+                    <textarea
+                        name="content"
+                        id="content"
+                        required
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    ></textarea>
+                    <br />
+                    <input type="submit" value="Submit" />
+                </form>
             </div>
-            <h2>Create a Note</h2>
-            <form action="" onSubmit={createNote}>
-                <label htmlFor="title">Title:</label>
-                <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    required
-                    onChange={(e) => setTitle(e.target.value)}
-                    value={title}
-                />
-                <br />
-                <label htmlFor="content">Content:</label>
-                <textarea
-                    name="content"
-                    id="content"
-                    required
-                    value={content}
-                    onChange={(e) => setContent(e.target.value)}
-                ></textarea>
-                <br />
-                <input type="submit" value="Submit" />
-            </form>
+            <Profile />
         </div>
     );
 }

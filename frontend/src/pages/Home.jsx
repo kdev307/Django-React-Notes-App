@@ -6,7 +6,7 @@ import Profile from "./Profile";
 
 function Home() {
     const [notes, setNotes] = useState([]);
-    const [content, setContent] = useState([]);
+    const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
 
     useEffect(() => {
@@ -49,16 +49,16 @@ function Home() {
 
     return (
         <div className="home">
-            <div>
+            <div className="notes">
                 <div>
-                    <h2>Your Notes</h2>
+                    <h1>Your Notes</h1>
                     <div className="note-block">
                         {notes.map((note) => (
                             <Note note={note} onDelete={deleteNote} key={note.id} />
                         ))}
                     </div>
                 </div>
-                <h2>Create a Note</h2>
+                <h1>Create a Note</h1>
                 <form action="" onSubmit={createNote}>
                     <label htmlFor="title">Title:</label>
                     <input

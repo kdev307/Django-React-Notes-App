@@ -1,8 +1,11 @@
 .note-block {
-    display: flex;
-    gap: 20px;
-    height: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-height: 30rem;
     max-width: 65rem;
+    overflow-y: auto;
+    padding: 1.8rem;
 }
 
 .note-container {
@@ -32,6 +35,13 @@
     font-size: 0.8rem;
 }
 
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+}
+
 .delete-button {
     background-color: #f44336; /* Red */
     color: white;
@@ -44,4 +54,18 @@
 
 .delete-button:hover {
     background-color: #d32f2f; /* Darker red */
+}
+
+.edit-button {
+    background-color: #3688f4; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #2f50d3; /* Darker blue */
 }

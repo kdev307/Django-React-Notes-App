@@ -9,7 +9,7 @@ function Profile() {
                 <div className="about-app">
                     <h2 className="about">About App</h2>
                     <p className="about">
-                        Welcome to Notes Plus! Our app makes note-taking simple and efficient.
+                        Welcome to our Notes App! Our app makes note-taking simple and efficient.
                         Capture your thoughts, ideas, and important information with ease.
                     </p>
                     <h3>Key Features:</h3>

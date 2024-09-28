@@ -8,6 +8,7 @@ div {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    font-family: "Poppins";
 }
 
 /* Styles for the notes section */
@@ -37,6 +38,8 @@ form {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 50rem;
     margin: 4rem;
+
+    background-color: #fdf8f2;
 }
 
 form h2 {
@@ -58,6 +61,7 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #f8f6f6;
 }
 
 form textarea {

@@ -38,3 +38,10 @@ class CreateUserView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+
+    # def get_queryset(self):
+    #     user = self.request.user
+    #     return User.objects.filter(author=user)
+
+    def perform_create(self, serializer):
+        serializer.save()

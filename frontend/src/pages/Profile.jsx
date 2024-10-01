@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import api from "../api";
 import "../styles/Profile.css";
 import "../styles/Home.css";
-function Profile() {
+import { useNavigate } from "react-router-dom";
+function Profile({ username }) {
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("ACCESS_TOKEN");
+        localStorage.removeItem("REFRESH_TOKEN");
+        navigate("/login");
+    };
     return (
         <div className="profile-container">
             <div className="profile-data">
-                <h1 className="user-name">Hello User</h1>
+                <h1 className="user-name">
+                    Hello User <em style={{ color: "#560000" }}>{username}</em>
+                </h1>
                 <div className="about-app">
                     <h2 className="about">About App</h2>
                     <p className="about">
@@ -26,7 +36,12 @@ function Profile() {
                             notes.
                         </li>
                         <li>
-                            <strong>Access Anytime:</strong> Your notes are available on any device.
+                            <strong>User Authentication:</strong> Log in to access your personal
+                            notes. Privacy
+                        </li>
+                        <li>
+                            <strong>Protection:</strong> Your notes are safeguarded from
+                            unauthorized access.
                         </li>
                     </ul>
                     <p>
@@ -34,7 +49,7 @@ function Profile() {
                         organized and inspired. Start taking control of your thoughts today!
                     </p>
                 </div>
-                <button type="submit" className="btn">
+                <button type="submit" className="btn" onClick={handleLogout}>
                     Logout
                 </button>
             </div>

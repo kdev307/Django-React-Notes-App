@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note";
 import "../styles/Home.css";
@@ -8,6 +9,8 @@ function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
+    const location = useLocation();
+    const username = location.state?.username || "John";
 
     useEffect(() => {
         getNotes();
@@ -82,7 +85,7 @@ function Home() {
                     <input type="submit" value="Submit" />
                 </form>
             </div>
-            <Profile />
+            <Profile username={username} />
         </div>
     );
 }

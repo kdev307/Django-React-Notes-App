@@ -70,7 +70,10 @@ Here are some of the screenshot of the full stack web application DfitKlub.
 
 1. Login Page :<br><br> <img src="./Screenshots/Login.png"><br><br>
 2. Registration Page :<br><br> <img src="./Screenshots/Registration.png"><br><br>
-3. Landing Page :<br><br> <img src="./Screenshots/Notes.png"><br><br>
+3. Notes Page :<br><br> <img src="./Screenshots/Notes.png"><br><br>
 4. Create Note :<br><br> <img src="./Screenshots/Create-Note-Form.png"><br><br>
-5. Note Creation : <br><br> <img src="./Screenshots/Note-Create.png"><br><br>
-6. Delete Note : <br><br> <img src="./Screenshots/Note-Delete.png">
+5. Note Creation : <br><br> <img src="./Screenshots/Note-Created.png"><br><br>
+6. Delete Note : <br><br> <img src="./Screenshots/Note-Deleted.png"> <br><br>
+7. Edit Note : <br><br> <img src="./Screenshots/Note-Editing.png"> <br><br>
+   <br><br> <img src="./Screenshots/Note-Edited.png"> <br><br>
+8. Updated Notes : <br><br> <img src="./Screenshots/Notes-Updated.png"> <br><br>

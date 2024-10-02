@@ -12,7 +12,7 @@ function Note({ note, onDelete, onEdit }) {
             <ul className="note-content">{listItems}</ul>
             <p className="note-date">{formattedDate}</p>
             <div className="button-container">
-                <button className="edit-button" onClick={() => onEdit(note.id)}>
+                <button className="edit-button" onClick={() => onEdit(note)}>
                     Edit
                 </button>
                 <button className="delete-button" onClick={() => onDelete(note.id)}>

@@ -9,6 +9,7 @@ function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
     const [title, setTitle] = useState("");
+    const [editingNoteId, setEditingNoteId] = useState(null);
     const location = useLocation();
     const username = location.state?.username || "John";
 
@@ -50,6 +51,27 @@ function Home() {
             .catch((err) => alert(err));
     };
 
+    const startEditing = (note) => {
+        setEditingNoteId(note.id);
+        setTitle(note.title);
+        setContent(note.content);
+    };
+
+    const updateNote = (e) => {
+        e.preventDefault();
+        api.put(`/api/notes/${editingNoteId}/`, { content, title })
+            .then((res) => {
+                if (res.status === 200) {
+                    alert("Note Updated !");
+                    setTitle("");
+                    setContent("");
+                    setEditingNoteId(null);
+                    getNotes();
+                } else alert("Failed to update note.");
+            })
+            .catch((err) => alert(err));
+    };
+
     return (
         <div className="home">
             <div className="notes">
@@ -57,12 +79,18 @@ function Home() {
                     <h1>Your Notes</h1>
                     <div className="note-block">
                         {notes.map((note) => (
-                            <Note note={note} onDelete={deleteNote} key={note.id} />
+                            <Note
+                                note={note}
+                                onDelete={deleteNote}
+                                onEdit={startEditing}
+                                key={note.id}
+                            />
                         ))}
                     </div>
                 </div>
-                <h1>Create a Note</h1>
-                <form action="" onSubmit={createNote}>
+                {/* <h1>Create a Note</h1> */}
+                <h1>{editingNoteId ? "Edit Note" : "Create a Note"}</h1>
+                <form action="" onSubmit={editingNoteId ? updateNote : createNote}>
                     <label htmlFor="title">Title:</label>
                     <input
                         type="text"
@@ -82,7 +110,7 @@ function Home() {
                         onChange={(e) => setContent(e.target.value)}
                     ></textarea>
                     <br />
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value={editingNoteId ? "Update" : "Submit"} />
                 </form>
             </div>
             <Profile username={username} />

@@ -77,12 +77,12 @@ Here are some of the screenshot of the full stack web application DfitKlub.
    <img src="./screenshots/create-note.png"><br><br>
    <img src="./screenshots/note-created.png"><br><br>
    <img src="./screenshots/notes-after-create.png"><br><br>
-5. Delete Note : <br><br>
-   <img src="./screenshots/delete-note.png"> <br><br>
-   <img src="./screenshots/notes-after-delete.png"> <br><br>
-6. Edit Note : <br><br>
+5. Edit Note : <br><br>
    <img src="./screenshots/edit-note.png"> <br><br>
    <img src="./screenshots/note-edited.png"> <br><br>
    <img src="./screenshots/notes-after-edit.png"> <br><br>
+6. Delete Note : <br><br>
+   <img src="./screenshots/delete-note.png"> <br><br>
+   <img src="./screenshots/notes-after-delete.png"> <br><br>
 7. Completed Note : <br><br>
    <img src="./screenshots/note-completed.png">

@@ -68,20 +68,21 @@ The default port numbers can be changed during the documentation. Refer document
 Here are some of the screenshot of the full stack web application DfitKlub.
 
 1. Login Page :<br><br>
-   <img src="./Screenshots/login.png"><br><br>
+   <img src="./screenshots/login.png"><br><br>
 2. Register Page :<br><br>
-   <img src="./Screenshots/register.png"><br><br>
+   <img src="./screenshots/register.png"><br><br>
 3. Notes Page :<br><br>
-   <img src="./Screenshots/notes.png"><br><br>
+   <img src="./screenshots/notes.png"><br><br>
 4. Create Note :<br><br>
-   <img src="./Screenshots/create-note.png"><br><br>
-   <img src="./Screenshots/note-created.png"><br><br>
-   <img src="./Screenshots/notes-after-create.png"><br><br>
+   <img src="./screenshots/create-note.png"><br><br>
+   <img src="./screenshots/note-created.png"><br><br>
+   <img src="./screenshots/notes-after-create.png"><br><br>
 5. Delete Note : <br><br>
-   <img src="./Screenshots/delete-note.png"> <br><br>
-   <img src="./Screenshots/notes-after-delete.png"> <br><br>
+   <img src="./screenshots/delete-note.png"> <br><br>
+   <img src="./screenshots/notes-after-delete.png"> <br><br>
 6. Edit Note : <br><br>
-   <img src="./Screenshots/edit-note.png"> <br><br>
-   <img src="./Screenshots/note-edited.png"> <br><br>
-   <img src="./Screenshots/notes-after-edit.png"> <br><br>
-7. Completed Note : <br><br> <img src="./Screenshots/note-completed.png"> <br><br>
+   <img src="./screenshots/edit-note.png"> <br><br>
+   <img src="./screenshots/note-edited.png"> <br><br>
+   <img src="./screenshots/notes-after-edit.png"> <br><br>
+7. Completed Note : <br><br>
+   <img src="./screenshots/note-completed.png">

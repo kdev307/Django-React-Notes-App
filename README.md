@@ -6,7 +6,6 @@ Our app makes note-taking simple and efficient. Capture your thoughts, ideas, an
 
 -   User-Friendly Design: Navigate effortlessly through your notes.
 -   Create and Edit: Quickly jot down or refine your ideas.
--   Organize with Tags: Easily categorize and find your notes.
 -   Access Anytime: Your notes are available on any device.
 
 Whether for studying, work, or personal use, Notes Plus helps you stay organized and inspired. Start taking control of your thoughts today!
@@ -68,12 +67,21 @@ The default port numbers can be changed during the documentation. Refer document
 
 Here are some of the screenshot of the full stack web application DfitKlub.
 
-1. Login Page :<br><br> <img src="./Screenshots/Login.png"><br><br>
-2. Registration Page :<br><br> <img src="./Screenshots/Registration.png"><br><br>
-3. Notes Page :<br><br> <img src="./Screenshots/Notes.png"><br><br>
-4. Create Note :<br><br> <img src="./Screenshots/Create-Note-Form.png"><br><br>
-5. Note Creation : <br><br> <img src="./Screenshots/Note-Created.png"><br><br>
-6. Delete Note : <br><br> <img src="./Screenshots/Note-Deleted.png"> <br><br>
-7. Edit Note : <br><br> <img src="./Screenshots/Note-Editing.png"> <br><br>
-   <br><br> <img src="./Screenshots/Note-Edited.png"> <br><br>
-8. Updated Notes : <br><br> <img src="./Screenshots/Notes-Updated.png"> <br><br>
+1. Login Page :<br><br>
+   <img src="./Screenshots/login.png"><br><br>
+2. Register Page :<br><br>
+   <img src="./Screenshots/register.png"><br><br>
+3. Notes Page :<br><br>
+   <img src="./Screenshots/notes.png"><br><br>
+4. Create Note :<br><br>
+   <img src="./Screenshots/create-note.png"><br><br>
+   <img src="./Screenshots/note-created.png"><br><br>
+   <img src="./Screenshots/notes-after-create.png"><br><br>
+5. Delete Note : <br><br>
+   <img src="./Screenshots/delete-note.png"> <br><br>
+   <img src="./Screenshots/notes-after-delete.png"> <br><br>
+6. Edit Note : <br><br>
+   <img src="./Screenshots/edit-note.png"> <br><br>
+   <img src="./Screenshots/note-edited.png"> <br><br>
+   <img src="./Screenshots/notes-after-edit.png"> <br><br>
+7. Completed Note : <br><br> <img src="./Screenshots/note-completed.png"> <br><br>

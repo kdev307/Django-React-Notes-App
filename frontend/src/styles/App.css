@@ -7,5 +7,12 @@ body {
     font-weight: 300;
     font-style: normal;
     color: #002354;
-    background-color: #f4eee6;
+    background-color: #d9d9d9;
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }

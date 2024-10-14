@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note";
 import "../styles/Home.css";
-import Profile from "./Profile";
 
 function Home() {
     const [notes, setNotes] = useState([]);
@@ -72,11 +71,26 @@ function Home() {
             .catch((err) => alert(err));
     };
 
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("ACCESS_TOKEN");
+        localStorage.removeItem("REFRESH_TOKEN");
+        navigate("/login");
+    };
+
     return (
         <div className="home">
-            <div className="notes">
-                <div>
-                    <h1>Your Notes</h1>
+            <nav className="navbar">
+                <h1 className="user-name">
+                    Hello <em style={{ color: "#0097ff" }}>{username}</em>
+                </h1>
+                <button type="submit" className="btn" onClick={handleLogout}>
+                    Logout
+                </button>
+            </nav>
+            <div className="notes-box">
+                <div className="notes">
+                    <h2>Your Notes</h2>
                     <div className="note-block">
                         {notes.map((note) => (
                             <Note
@@ -88,32 +102,34 @@ function Home() {
                         ))}
                     </div>
                 </div>
-                {/* <h1>Create a Note</h1> */}
-                <h1>{editingNoteId ? "Edit Note" : "Create a Note"}</h1>
-                <form action="" onSubmit={editingNoteId ? updateNote : createNote}>
-                    <label htmlFor="title">Title:</label>
-                    <input
-                        type="text"
-                        id="title"
-                        name="title"
-                        required
-                        onChange={(e) => setTitle(e.target.value)}
-                        value={title}
-                    />
-                    <br />
-                    <label htmlFor="content">Content:</label>
-                    <textarea
-                        name="content"
-                        id="content"
-                        required
-                        value={content}
-                        onChange={(e) => setContent(e.target.value)}
-                    ></textarea>
-                    <br />
-                    <input type="submit" value={editingNoteId ? "Update" : "Submit"} />
-                </form>
+                <div className="separator"></div>
+                <div className="note-editor">
+                    {/* <h1>Create a Note</h1> */}
+                    <h2>{editingNoteId ? "Edit Note" : "Create a Note"}</h2>
+                    <form action="" onSubmit={editingNoteId ? updateNote : createNote}>
+                        <label htmlFor="title">Title:</label>
+                        <input
+                            type="text"
+                            id="title"
+                            name="title"
+                            required
+                            onChange={(e) => setTitle(e.target.value)}
+                            value={title}
+                        />
+                        <br />
+                        <label htmlFor="content">Content:</label>
+                        <textarea
+                            name="content"
+                            id="content"
+                            required
+                            value={content}
+                            onChange={(e) => setContent(e.target.value)}
+                        ></textarea>
+                        <br />
+                        <input type="submit" value={editingNoteId ? "Update" : "Submit"} />
+                    </form>
+                </div>
             </div>
-            <Profile username={username} />
         </div>
     );
 }

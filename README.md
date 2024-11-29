@@ -51,6 +51,9 @@ Whether for studying, work, or personal use, Notes Plus helps you stay organized
     -   `npm install react-router-dom`
 -   Run the Vite Development Server:
     -   `npm run dev`
+-   Add a `.env` file in the root directory of the frontend folder with the following code in that file:
+        `VITE_API_URL = "http://127.0.0.1:8000"`
+    Otherwise you'll be facing Axios Error
 -   Launch the application
     -   Launch backend:
         -   backend can be accessed using `localhost:8000/api/user` on browser
